@@ -283,7 +283,7 @@ public class SauceConnectFourManager extends AbstractSauceTunnelManager implemen
             removeOldTarFile(zipFile);
             unArchiver = new TarGZipUnArchiver();
         } else {
-            throw new RuntimeException("Unknown operating system: " + operatingSystem.name());
+            throw new RuntimeException("Unknown operating system detected: " + operatingSystem.name());
         }
         unArchiver.setSourceFile(zipFile);
         unArchiver.setDestDirectory(workingDirectory);
